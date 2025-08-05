@@ -3,10 +3,10 @@
     --primary: #A52A2A;
     --secondary: #DC143C;
     --dark: #333;
-    --light: #f8f9fa;
-    --white: #fff;
+    --light: #d9dee3;
+    --white: hwb(0 98% 2% / 0.684);
     --black: #000;
-    --gray: #6c757d;
+    --gray: #1b1b1c;
 }
 
 * {
@@ -67,9 +67,9 @@ img {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(rgba(165, 42, 42, 0.9), rgba(165, 42, 42, 0.9)), 
+                url('menu-bg.jpg') center/cover no-repeat;
+    color: var(--white);
     z-index: 1000;
     padding: 15px 0;
     transition: all 0.3s ease;
@@ -77,7 +77,9 @@ img {
 
 .header.scrolled {
     padding: 10px 0;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(rgba(165, 42, 42, 0.95), rgba(165, 42, 42, 0.95)), 
+                url('menu-bg.jpg') center/cover no-repeat !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .header .container {
@@ -91,15 +93,14 @@ img {
     align-items: center;
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--primary);
 }
 
 .logo i {
     margin-right: 10px;
-    color: var(--black);
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.2);
     padding: 10px;
     border-radius: 8px;
+    color: var(--white);
 }
 
 .menu-toggle {
@@ -115,7 +116,7 @@ img {
     display: block;
     width: 25px;
     height: 3px;
-    background: var(--primary);
+    background: var(--white);
     margin: 5px 0;
     transition: all 0.3s ease;
 }
@@ -130,10 +131,11 @@ img {
     padding: 10px 15px;
     transition: all 0.3s ease;
     position: relative;
+    color: var(--white);
 }
 
 .navbar a:hover {
-    color: var(--secondary);
+    color: #ffcccc;
 }
 
 .navbar a::after {
@@ -143,7 +145,7 @@ img {
     left: 15px;
     width: 0;
     height: 2px;
-    background: var(--secondary);
+    background: var(--white);
     transition: all 0.3s ease;
 }
 
@@ -152,17 +154,18 @@ img {
 }
 
 .btn-work {
-    background: var(--secondary);
-    color: var(--white);
+    background: var(--white);
+    color: var(--primary);
     border-radius: 30px;
     padding: 10px 20px;
     transition: all 0.3s ease;
+    font-weight: 600;
 }
 
 .btn-work:hover {
-    background: var(--primary);
+    background: #f0f0f0;
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(220, 20, 60, 0.3);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
 }
 
 /* Hero */
@@ -551,7 +554,7 @@ img {
         width: 80%;
         max-width: 300px;
         height: 100vh;
-        background: var(--white);
+        background: var(--primary);
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
         transition: all 0.3s ease;
         padding: 80px 30px 30px;

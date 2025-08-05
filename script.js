@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
     });
     
-    // Dados dos depoimentos
+    // Dados dos depoimentos (com mais depoimentos)
     const testimonialsData = [
         {
             quote: "A Stone Zeladoria transformou nossa fazenda. Excelente trabalho de zeladoria e paisagismo. Equipe muito profissional e dedicada.",
@@ -93,6 +93,31 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             quote: "Serviços de alta qualidade! A manutenção das nossas áreas verdes ficou impecável. Recomendamos a Stone Zeladoria.",
             author: "Fazenda Dengosa",
+            role: "Cliente Satisfeito"
+        },
+        {
+            quote: "A equipe da Stone Zeladoria é extremamente competente. Nossas instalações estão sempre impecáveis e seguras.",
+            author: "Fazenda Roseira",
+            role: "Cliente Satisfeito"
+        },
+        {
+            quote: "Profissionalismo e dedicação definem a Stone Zeladoria. A segurança e a limpeza do nosso condomínio melhoraram significativamente.",
+            author: "Fazenda Rio Pardo",
+            role: "Cliente Satisfeito"
+        },
+        {
+            quote: "A zeladoria do Edifício HADOCK Lobo está em ótimas mãos. A Stone Zeladoria superou nossas expectativas em todos os aspectos.",
+            author: "Edifício HADOCK Lobo",
+            role: "Cliente Satisfeito"
+        },
+        {
+            quote: "Estamos muito satisfeitos com a segurança e a limpeza oferecidas pela Stone Zeladoria no Edifício London Palace. Serviço de primeira!",
+            author: "Edifício London Palace",
+            role: "Cliente Satisfeito"
+        },
+        {
+            quote: "A tranquilidade no Condomínio Terras de Santa Mariana é garantida pela Stone Zeladoria. Profissionais dedicados e eficientes.",
+            author: "Condomínio Terras de Santa Mariana",
             role: "Cliente Satisfeito"
         }
     ];
@@ -143,6 +168,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 this.reset();
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
+                
+                // Envio real via FormSubmit
+                // this.submit(); // Descomente se quiser enviar direto sem alerta
             }, 2000);
         });
     }
